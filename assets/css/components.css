@@ -13,45 +13,52 @@
   text-align: center;
   text-decoration: none;
   cursor: pointer;
+  box-shadow: var(--sombra-botao);
+  transition: background-color 180ms ease, border-color 180ms ease, color 180ms ease, box-shadow 180ms ease;
 }
 
 .botao-principal {
-  background: var(--cor-rosa);
-  color: #502e33;
+  background: var(--cor-primaria);
+  color: var(--cor-texto-sobre-primaria);
 }
 
 .botao-principal:hover {
-  background: var(--cor-rosa-hover);
+  background: var(--cor-primaria-hover);
 }
 
 .botao-contorno {
   border-color: var(--cor-borda);
-  background: white;
+  background: var(--cor-superficie);
   color: var(--cor-texto);
 }
 
 .botao-contorno:hover {
-  background: #f4f6f3;
+  background: var(--cor-apoio);
 }
 
 .botao-escuro {
-  background: var(--cor-marrom);
-  color: white;
+  background: var(--cor-detalhe);
+  color: var(--cor-texto);
+}
+
+.botao-escuro:hover {
+  background: var(--cor-detalhe-hover);
 }
 
 .botao-perigo {
-  border-color: var(--cor-vermelha-clara);
-  background: white;
-  color: var(--cor-vermelha);
+  border-color: var(--cor-critico-fundo);
+  background: var(--cor-superficie);
+  color: var(--cor-critico);
 }
 
 .botao-perigo:hover {
-  background: var(--cor-vermelha-clara);
+  background: var(--cor-critico-fundo);
 }
 
 button:disabled {
   opacity: 0.5;
   cursor: not-allowed;
+  box-shadow: none;
 }
 
 /* 5. Cartões e grades. minmax(0, 1fr) permite que a coluna encolha. */
@@ -60,7 +67,7 @@ button:disabled {
   min-width: 0;
   padding: 20px 22px;
   border-radius: var(--borda-arredondada);
-  background: var(--cor-cartao);
+  background: var(--cor-superficie);
   box-shadow: var(--sombra-cartao);
 }
 
@@ -73,7 +80,7 @@ button:disabled {
 
 .indicador h2 {
   margin-bottom: 14px;
-  color: var(--cor-secundaria);
+  color: var(--cor-texto-secundario);
   font-size: 0.875rem;
   font-weight: 500;
 }
@@ -137,7 +144,7 @@ button:disabled {
 .campo label {
   display: block;
   margin-bottom: 6px;
-  color: var(--cor-secundaria);
+  color: var(--cor-texto-secundario);
   font-size: 0.875rem;
   font-weight: 600;
 }
@@ -151,15 +158,15 @@ button:disabled {
   padding: 9px 12px;
   border: 1px solid var(--cor-borda);
   border-radius: 9px;
-  background: #fdfdfc;
+  background: var(--cor-superficie);
   color: var(--cor-texto);
 }
 
 .campo input:focus,
 .campo select:focus,
 .busca input:focus {
-  border-color: var(--cor-marrom);
-  background: white;
+  border-color: var(--cor-primaria);
+  background: var(--cor-superficie);
 }
 
 .busca {
@@ -168,7 +175,7 @@ button:disabled {
 }
 
 .busca input {
-  background: white;
+  background: var(--cor-superficie);
   font-size: 0.875rem;
 }
 
@@ -221,7 +228,7 @@ td {
 }
 
 thead th {
-  color: var(--cor-secundaria);
+  color: var(--cor-texto-secundario);
   font-weight: 600;
   white-space: nowrap;
 }
@@ -231,7 +238,7 @@ tbody td {
 }
 
 tbody tr:hover {
-  background: #fafbf9;
+  background: var(--cor-fundo);
 }
 
 tfoot th,
@@ -242,7 +249,7 @@ tfoot td {
 
 .estado-vazio {
   padding: 24px 8px;
-  color: var(--cor-secundaria);
+  color: var(--cor-texto-secundario);
   text-align: center;
   white-space: normal;
 }
@@ -257,18 +264,18 @@ tfoot td {
 }
 
 .selo-critico {
-  background: var(--cor-vermelha-clara);
-  color: var(--cor-vermelha);
+  background: var(--cor-critico-fundo);
+  color: var(--cor-critico);
 }
 
 .selo-baixo {
-  background: var(--cor-amarela-clara);
-  color: var(--cor-amarela);
+  background: var(--cor-atencao-fundo);
+  color: var(--cor-atencao);
 }
 
 .selo-normal {
-  background: var(--cor-verde-clara);
-  color: var(--cor-verde);
+  background: var(--cor-sucesso-fundo);
+  color: var(--cor-sucesso);
 }
 
 /* 8. Precificação e listas do início. */

@@ -6,23 +6,54 @@
 
 /* 1. Cores e medidas reutilizadas com var(--nome-da-variavel). */
 :root {
-  --cor-fundo: #dbe5da;
-  --cor-cartao: #ffffff;
-  --cor-texto: #23262a;
-  --cor-secundaria: #5b625d;
-  --cor-borda: #dde5dc;
-  --cor-rosa: #f0a3a1;
-  --cor-rosa-hover: #e88d8a;
-  --cor-rosa-clara: #fbe4e2;
-  --cor-marrom: #6f4d51;
-  --cor-verde: #267044;
-  --cor-verde-clara: #e0f3e5;
-  --cor-amarela: #855610;
-  --cor-amarela-clara: #fdf0d8;
-  --cor-vermelha: #a73330;
-  --cor-vermelha-clara: #fbe1e0;
+  --cor-fundo: #F8EBDD;
+  --cor-superficie: #FFF8F0;
+  --cor-apoio: #EED4BA;
+  --cor-primaria: #6B3E2E;
+  --cor-primaria-hover: #55301F;
+  --cor-detalhe: #C8895A;
+  --cor-detalhe-hover: #B5774A;
+  --cor-texto: #2E1F1A;
+  --cor-texto-sobre-primaria: #FFF8F0;
+  --cor-texto-secundario: #7A645A;
+  --cor-borda: #DFC6AF;
+  --cor-critico: #9A3B1F;
+  --cor-critico-fundo: #F8DDD2;
+  --cor-atencao: #8A5A00;
+  --cor-atencao-fundo: #FBEBC8;
+  --cor-sucesso: #3F6B47;
+  --cor-sucesso-fundo: #E3EEDD;
+  --cor-sombra: rgba(46, 31, 26, 0.07);
+  --cor-sombra-modal: rgba(46, 31, 26, 0.2);
+  --cor-overlay: rgba(46, 31, 26, 0.4);
   --borda-arredondada: 16px;
-  --sombra-cartao: 0 2px 12px rgba(35, 45, 35, 0.07);
+  --sombra-botao: 0 1px 4px rgba(46, 31, 26, 0.08);
+  --sombra-cartao: 0 1px 8px var(--cor-sombra);
+}
+
+html[data-tema="escuro"] {
+  color-scheme: dark;
+  --cor-fundo: #271C1A;
+  --cor-superficie: #3E2D2A;
+  --cor-apoio: #523A34;
+  --cor-primaria: #987A6C;
+  --cor-primaria-hover: #AA8D7E;
+  --cor-detalhe: #D3C1B7;
+  --cor-detalhe-hover: #C5B1A7;
+  --cor-texto: #F3ECE8;
+  --cor-texto-sobre-primaria: #271C1A;
+  --cor-texto-secundario: #C8B4AA;
+  --cor-borda: #66483F;
+  --cor-critico: #E7AEA1;
+  --cor-critico-fundo: #56352F;
+  --cor-atencao: #DDC8BB;
+  --cor-atencao-fundo: #523A34;
+  --cor-sucesso: #B8CDB9;
+  --cor-sucesso-fundo: #3B5140;
+  --cor-sombra: rgba(0, 0, 0, 0.16);
+  --cor-sombra-modal: rgba(0, 0, 0, 0.4);
+  --cor-overlay: rgba(0, 0, 0, 0.62);
+  --sombra-botao: 0 1px 4px rgba(0, 0, 0, 0.18);
 }
 
 /* 2. Regras gerais. box-sizing inclui bordas e padding no tamanho do elemento. */
@@ -46,7 +77,7 @@ select {
 }
 
 a {
-  color: var(--cor-marrom);
+  color: var(--cor-primaria);
   text-underline-offset: 3px;
 }
 
@@ -78,13 +109,13 @@ h3 {
 }
 
 :focus-visible {
-  outline: 3px solid var(--cor-marrom);
-  outline-offset: 3px;
+  outline: 2px solid var(--cor-primaria);
+  outline-offset: 2px;
 }
 
 .texto-secundario,
 .nota {
-  color: var(--cor-secundaria);
+  color: var(--cor-texto-secundario);
   font-size: 0.875rem;
 }
 
@@ -93,10 +124,9 @@ h3 {
 }
 
 .texto-verde {
-  color: var(--cor-verde);
+  color: var(--cor-sucesso);
 }
 
 .texto-vermelho {
-  color: var(--cor-vermelha);
+  color: var(--cor-critico);
 }
-

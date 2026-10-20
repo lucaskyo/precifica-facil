@@ -6,6 +6,7 @@
   <title>Produção | Precifica Fácil</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <script src="../js/core/tema.js"></script>
   <link rel="stylesheet" href="../style.css">
 
   <!-- defer espera o HTML ficar pronto e mantém a ordem destes três arquivos. -->
@@ -22,8 +23,7 @@
     <!-- Este menu é igual em todas as telas. aria-current marca a tela atual. -->
     <aside class="menu-lateral">
       <a class="marca" href="index.html">
-        <span class="marca-icone" aria-hidden="true">🧁</span>
-        <span><strong>Precifica Fácil</strong><small>CONFEITARIA</small></span>
+        <img class="marca-logo" src="../assets/logo-precifica-facil.png" alt="Precifica Fácil">
       </a>
       <nav class="menu" aria-label="Menu principal">
         <a class="menu-link" href="index.html">
@@ -63,6 +63,10 @@
           <span>Resumo Mensal</span>
         </a>
       </nav>
+      <button class="alternador-tema" type="button" data-alternar-tema aria-pressed="false" aria-label="Modo claro ativado">
+        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3 6.5 6.5 0 0 0 21 12.8z"/></svg>
+        <span data-tema-label>Modo claro</span>
+      </button>
     </aside>
 
     <!-- Aqui começa o conteúdo exclusivo desta tela. -->

@@ -15,7 +15,7 @@
 .destaque-preco {
   padding: 18px;
   border-radius: 12px;
-  background: var(--cor-rosa-clara);
+  background: var(--cor-apoio);
   text-align: center;
 }
 
@@ -51,7 +51,7 @@
 .atividade {
   padding: 12px 0 12px 14px;
   border-bottom: 1px solid var(--cor-borda);
-  border-left: 3px solid var(--cor-rosa);
+  border-left: 3px solid var(--cor-detalhe);
   font-size: 0.9375rem;
 }
 
@@ -64,13 +64,13 @@
   margin: 20px 0;
   padding: 14px 16px;
   border-radius: 12px;
-  background: var(--cor-verde-clara);
-  color: var(--cor-verde);
+  background: var(--cor-sucesso-fundo);
+  color: var(--cor-sucesso);
 }
 
 .aviso-erro {
-  background: var(--cor-vermelha-clara);
-  color: var(--cor-vermelha);
+  background: var(--cor-critico-fundo);
+  color: var(--cor-critico);
 }
 
 /* 9. Resumo mensal e paginação. */
@@ -95,28 +95,28 @@ progress {
   overflow: hidden;
   border: none;
   border-radius: 8px;
-  background: #f1f3ef;
+  background: var(--cor-apoio);
   appearance: none;
 }
 
 progress::-webkit-progress-bar {
-  background: #f1f3ef;
+  background: var(--cor-apoio);
 }
 
 .barra-faturamento::-webkit-progress-value {
-  background: var(--cor-rosa);
+  background: var(--cor-primaria);
 }
 
 .barra-faturamento::-moz-progress-bar {
-  background: var(--cor-rosa);
+  background: var(--cor-primaria);
 }
 
 .barra-custo::-webkit-progress-value {
-  background: var(--cor-marrom);
+  background: var(--cor-detalhe);
 }
 
 .barra-custo::-moz-progress-bar {
-  background: var(--cor-marrom);
+  background: var(--cor-detalhe);
 }
 
 .legenda {
@@ -125,7 +125,7 @@ progress::-webkit-progress-bar {
   flex-wrap: wrap;
   gap: 16px;
   margin-top: 16px;
-  color: var(--cor-secundaria);
+  color: var(--cor-texto-secundario);
   font-size: 0.875rem;
 }
 
@@ -135,8 +135,8 @@ progress::-webkit-progress-bar {
   height: 30px;
   place-items: center;
   border-radius: 8px;
-  background: var(--cor-rosa-clara);
-  color: var(--cor-marrom);
+  background: var(--cor-apoio);
+  color: var(--cor-primaria);
   font-weight: 700;
 }
 
@@ -167,12 +167,13 @@ progress::-webkit-progress-bar {
   overflow-y: auto;
   border: none;
   border-radius: var(--borda-arredondada);
+  background: var(--cor-superficie);
   color: var(--cor-texto);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 20px 60px var(--cor-sombra-modal);
 }
 
 .modal::backdrop {
-  background: rgba(20, 25, 20, 0.4);
+  background: var(--cor-overlay);
 }
 
 .mensagem {
@@ -186,13 +187,13 @@ progress::-webkit-progress-bar {
   padding: 14px 18px;
   border-radius: 10px;
   background: var(--cor-texto);
-  color: white;
+  color: var(--cor-texto-sobre-primaria);
   font-size: 0.875rem;
   box-shadow: var(--sombra-cartao);
 }
 
 .mensagem-erro {
-  background: var(--cor-vermelha);
+  background: var(--cor-critico);
 }
 
 .modal .mensagem {
@@ -217,11 +218,10 @@ progress::-webkit-progress-bar {
   left: 8px;
   z-index: 200;
   padding: 10px;
-  background: white;
+  background: var(--cor-superficie);
   transform: translateY(-200%);
 }
 
 .pular-menu:focus {
   transform: translateY(0);
 }
-

@@ -22,6 +22,10 @@
     padding: 16px;
   }
 
+  .menu-lateral > .alternador-tema {
+    margin-top: 14px;
+  }
+
   .marca {
     padding-bottom: 14px;
   }

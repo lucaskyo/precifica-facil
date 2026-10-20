@@ -16,6 +16,7 @@ Aplicação web para gestão de confeitaria, com recursos para controlar ingredi
 - Exportação do relatório de vendas.
 - Persistência dos dados no navegador usando `localStorage`.
 - Interface responsiva e acessível.
+- Alternância entre tema claro e escuro, com preferência salva no navegador e suporte à preferência do sistema.
 
 ## Tecnologias
 
