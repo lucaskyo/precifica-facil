@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Receitas | Precifica Fácil</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+
+  <!-- defer espera o HTML ficar pronto e mantém a ordem destes três arquivos. -->
+  <script src="../js/dados.js" defer></script>
+  <script src="../js/core/formatacao.js" defer></script>
+  <script src="../js/core/consultas.js" defer></script>
+  <script src="../js/core/calculos.js" defer></script>
+  <script src="../js/core/interface.js" defer></script>
+  <script src="../js/pages/receitas.js" defer></script>
+</head>
+<body>
+  <a href="#conteudo" class="pular-menu">Ir para o conteúdo</a>
+  <div class="aplicacao">
+    <!-- Este menu é igual em todas as telas. aria-current marca a tela atual. -->
+    <aside class="menu-lateral">
+      <a class="marca" href="index.html">
+        <span class="marca-icone" aria-hidden="true">🧁</span>
+        <span><strong>Precifica Fácil</strong><small>CONFEITARIA</small></span>
+      </a>
+      <nav class="menu" aria-label="Menu principal">
+        <a class="menu-link" href="index.html">
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg>
+          <span>Início</span>
+        </a>
+        <a class="menu-link" href="ingredientes.html">
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 4 13c0-4 3-9 7-11 4 2 7 7 7 11a7 7 0 0 1-7 7z"/><path d="M11 20V9"/></svg>
+          <span>Ingredientes</span>
+        </a>
+        <a class="menu-link" href="compras.html">
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.5 3h2l2.6 12.4a2 2 0 0 0 2 1.6h8.7a2 2 0 0 0 2-1.6L21.5 7H6"/></svg>
+          <span>Compras</span>
+        </a>
+        <a class="menu-link" href="receitas.html" aria-current="page">
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+          <span>Receitas</span>
+        </a>
+        <a class="menu-link" href="producao.html">
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          <span>Produção</span>
+        </a>
+        <a class="menu-link" href="estoque.html">
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8l-9-5-9 5 9 5 9-5z"/><path d="M3 8v8l9 5 9-5V8"/><path d="M12 13v8"/></svg>
+          <span>Estoque</span>
+        </a>
+        <a class="menu-link" href="vendas.html">
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.6 12.9L12 21.5 2.5 12 2.5 3.5 12 3.5l8.6 8.6a2 2 0 0 1 0 2.8z"/><circle cx="7.5" cy="8.5" r="1"/></svg>
+          <span>Vendas</span>
+        </a>
+        <a class="menu-link" href="historico.html">
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+          <span>Histórico</span>
+        </a>
+        <a class="menu-link" href="resumo.html">
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+          <span>Resumo Mensal</span>
+        </a>
+      </nav>
+    </aside>
+
+    <!-- Aqui começa o conteúdo exclusivo desta tela. -->
+    <main id="conteudo" class="conteudo">
+      <header class="cabecalho-pagina">
+        <div>
+          <h1>Receitas</h1>
+          <p class="texto-secundario">Consulte suas fichas técnicas e os preços cadastrados.</p>
+        </div>
+        <div class="acoes"><label class="busca" for="busca-receita">
+            <span class="somente-leitor">Buscar receita...</span>
+            <input type="search" id="busca-receita" placeholder="Buscar receita...">
+          </label><a class="botao botao-contorno" href="nova-receita.html">+ Nova Receita</a></div>
+      </header>
+      <div class="grade-receitas" id="lista-receitas"></div>
+    </main>
+  </div>
+
+
+  <noscript><p>Ative o JavaScript para usar os cadastros e os cálculos.</p></noscript>
+  <!-- Avisos de erro permanecem visíveis; mensagens de sucesso somem sozinhas. -->
+  <p id="mensagem" class="mensagem" role="status" aria-live="polite" hidden></p>
+</body>
+</html>

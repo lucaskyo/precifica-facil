@@ -1,0 +1,274 @@
+/* 4. Botões: links navegam; buttons executam ações. */
+.botao {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 42px;
+  padding: 9px 15px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.4;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.botao-principal {
+  background: var(--cor-rosa);
+  color: #502e33;
+}
+
+.botao-principal:hover {
+  background: var(--cor-rosa-hover);
+}
+
+.botao-contorno {
+  border-color: var(--cor-borda);
+  background: white;
+  color: var(--cor-texto);
+}
+
+.botao-contorno:hover {
+  background: #f4f6f3;
+}
+
+.botao-escuro {
+  background: var(--cor-marrom);
+  color: white;
+}
+
+.botao-perigo {
+  border-color: var(--cor-vermelha-clara);
+  background: white;
+  color: var(--cor-vermelha);
+}
+
+.botao-perigo:hover {
+  background: var(--cor-vermelha-clara);
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* 5. Cartões e grades. minmax(0, 1fr) permite que a coluna encolha. */
+.cartao,
+.indicador {
+  min-width: 0;
+  padding: 20px 22px;
+  border-radius: var(--borda-arredondada);
+  background: var(--cor-cartao);
+  box-shadow: var(--sombra-cartao);
+}
+
+.grade-indicadores {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.indicador h2 {
+  margin-bottom: 14px;
+  color: var(--cor-secundaria);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.indicador-valor {
+  margin-bottom: 5px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.indicador .texto-secundario {
+  margin-bottom: 0;
+}
+
+.grade-duas-colunas {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.4fr);
+  align-items: start;
+  gap: 18px;
+}
+
+.grade-receitas {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.cabecalho-cartao {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.cabecalho-cartao h2 {
+  margin-bottom: 8px;
+  overflow-wrap: anywhere;
+}
+
+.cabecalho-cartao a {
+  font-size: 0.875rem;
+}
+
+.receita-cartao {
+  display: flex;
+  flex-direction: column;
+}
+
+.receita-cartao .acoes {
+  margin-top: auto;
+}
+
+/* 6. Formulários e pesquisa. */
+.campo {
+  min-width: 0;
+  margin-bottom: 16px;
+}
+
+.campo label {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--cor-secundaria);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.campo input,
+.campo select,
+.busca input {
+  width: 100%;
+  min-width: 0;
+  min-height: 42px;
+  padding: 9px 12px;
+  border: 1px solid var(--cor-borda);
+  border-radius: 9px;
+  background: #fdfdfc;
+  color: var(--cor-texto);
+}
+
+.campo input:focus,
+.campo select:focus,
+.busca input:focus {
+  border-color: var(--cor-marrom);
+  background: white;
+}
+
+.busca {
+  width: 240px;
+  max-width: 100%;
+}
+
+.busca input {
+  background: white;
+  font-size: 0.875rem;
+}
+
+.linha-campos {
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.linha-campos .campo {
+  flex: 1 1 180px;
+  margin-bottom: 0;
+}
+
+.filtros {
+  margin-bottom: 20px;
+}
+
+.linha-ingrediente {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(100px, 1fr) auto;
+  align-items: end;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.linha-ingrediente .campo {
+  margin-bottom: 0;
+}
+
+/* 7. Tabelas. A rolagem fica na tabela, não na página inteira. */
+.tabela-rolagem {
+  width: 100%;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+th,
+td {
+  padding: 13px 12px;
+  border-bottom: 1px solid var(--cor-borda);
+  text-align: left;
+  vertical-align: middle;
+}
+
+thead th {
+  color: var(--cor-secundaria);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+tbody td {
+  white-space: nowrap;
+}
+
+tbody tr:hover {
+  background: #fafbf9;
+}
+
+tfoot th,
+tfoot td {
+  border-top: 2px solid var(--cor-borda);
+  font-weight: 700;
+}
+
+.estado-vazio {
+  padding: 24px 8px;
+  color: var(--cor-secundaria);
+  text-align: center;
+  white-space: normal;
+}
+
+.selo {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.selo-critico {
+  background: var(--cor-vermelha-clara);
+  color: var(--cor-vermelha);
+}
+
+.selo-baixo {
+  background: var(--cor-amarela-clara);
+  color: var(--cor-amarela);
+}
+
+.selo-normal {
+  background: var(--cor-verde-clara);
+  color: var(--cor-verde);
+}
+
+/* 8. Precificação e listas do início. */

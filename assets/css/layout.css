@@ -1,0 +1,115 @@
+/* 3. Estrutura principal e menu lateral. */
+.aplicacao {
+  display: flex;
+  min-height: 100vh;
+}
+
+.menu-lateral {
+  position: sticky;
+  top: 0;
+  width: 236px;
+  height: 100vh;
+  flex-shrink: 0;
+  overflow-y: auto;
+  padding: 24px 16px;
+  border-right: 1px solid var(--cor-borda);
+  background: var(--cor-cartao);
+}
+
+.marca {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 4px 8px 24px;
+  color: var(--cor-texto);
+  text-decoration: none;
+}
+
+.marca-icone {
+  display: grid;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  place-items: center;
+  border-radius: 10px;
+  background: var(--cor-rosa);
+  font-size: 1.3rem;
+}
+
+.marca strong {
+  display: block;
+  font-size: 0.9375rem;
+}
+
+.marca small {
+  display: block;
+  color: var(--cor-marrom);
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.menu-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  color: var(--cor-secundaria);
+  font-size: 0.9375rem;
+  text-decoration: none;
+}
+
+.menu-link svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  stroke: currentColor;
+}
+
+.menu-link:hover {
+  background: #f4f6f3;
+}
+
+.menu-link[aria-current="page"] {
+  background: var(--cor-rosa-clara);
+  color: var(--cor-marrom);
+  font-weight: 700;
+}
+
+.conteudo {
+  width: 100%;
+  min-width: 0;
+  padding: 30px 36px 60px;
+}
+
+.cabecalho-pagina {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 22px;
+}
+
+.cabecalho-pagina p {
+  margin-bottom: 0;
+}
+
+.acoes,
+.acoes-formulario {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.acoes-formulario {
+  margin-top: 20px;
+}
+

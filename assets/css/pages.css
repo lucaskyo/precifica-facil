@@ -1,0 +1,227 @@
+.linha-preco {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 0;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--cor-borda);
+  font-size: 0.875rem;
+}
+
+.linha-preco strong {
+  flex-shrink: 0;
+}
+
+.destaque-preco {
+  padding: 18px;
+  border-radius: 12px;
+  background: var(--cor-rosa-clara);
+  text-align: center;
+}
+
+.destaque-preco > strong {
+  font-size: 1.5rem;
+}
+
+.destaque-preco p {
+  margin-bottom: 8px;
+  font-size: 0.875rem;
+}
+
+.destaque-preco p:last-child {
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
+.item-lista {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--cor-borda);
+  font-size: 0.9375rem;
+}
+
+.item-lista p {
+  margin-bottom: 4px;
+}
+
+.atividade {
+  padding: 12px 0 12px 14px;
+  border-bottom: 1px solid var(--cor-borda);
+  border-left: 3px solid var(--cor-rosa);
+  font-size: 0.9375rem;
+}
+
+.atividade p {
+  margin-bottom: 4px;
+  overflow-wrap: anywhere;
+}
+
+.aviso {
+  margin: 20px 0;
+  padding: 14px 16px;
+  border-radius: 12px;
+  background: var(--cor-verde-clara);
+  color: var(--cor-verde);
+}
+
+.aviso-erro {
+  background: var(--cor-vermelha-clara);
+  color: var(--cor-vermelha);
+}
+
+/* 9. Resumo mensal e paginação. */
+.grafico {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.linha-grafico {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+  font-size: 0.875rem;
+}
+
+progress {
+  width: 100%;
+  height: 14px;
+  overflow: hidden;
+  border: none;
+  border-radius: 8px;
+  background: #f1f3ef;
+  appearance: none;
+}
+
+progress::-webkit-progress-bar {
+  background: #f1f3ef;
+}
+
+.barra-faturamento::-webkit-progress-value {
+  background: var(--cor-rosa);
+}
+
+.barra-faturamento::-moz-progress-bar {
+  background: var(--cor-rosa);
+}
+
+.barra-custo::-webkit-progress-value {
+  background: var(--cor-marrom);
+}
+
+.barra-custo::-moz-progress-bar {
+  background: var(--cor-marrom);
+}
+
+.legenda {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 16px;
+  color: var(--cor-secundaria);
+  font-size: 0.875rem;
+}
+
+.posicao-ranking {
+  display: grid;
+  width: 30px;
+  height: 30px;
+  place-items: center;
+  border-radius: 8px;
+  background: var(--cor-rosa-clara);
+  color: var(--cor-marrom);
+  font-weight: 700;
+}
+
+.ranking-produto {
+  flex: 1 1 150px;
+  overflow-wrap: anywhere;
+}
+
+.paginacao {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 20px;
+  font-size: 0.875rem;
+}
+
+.paginacao p {
+  margin-bottom: 0;
+}
+
+/* 10. Janelas, mensagens e navegação por teclado. */
+.modal {
+  width: min(480px, calc(100% - 32px));
+  max-height: calc(100vh - 48px);
+  padding: 24px;
+  overflow-y: auto;
+  border: none;
+  border-radius: var(--borda-arredondada);
+  color: var(--cor-texto);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+}
+
+.modal::backdrop {
+  background: rgba(20, 25, 20, 0.4);
+}
+
+.mensagem {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 100;
+  width: max-content;
+  max-width: min(560px, calc(100% - 44px));
+  margin: 0;
+  padding: 14px 18px;
+  border-radius: 10px;
+  background: var(--cor-texto);
+  color: white;
+  font-size: 0.875rem;
+  box-shadow: var(--sombra-cartao);
+}
+
+.mensagem-erro {
+  background: var(--cor-vermelha);
+}
+
+.modal .mensagem {
+  position: static;
+  width: auto;
+  max-width: 100%;
+  margin-top: 16px;
+}
+
+.somente-leitor {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.pular-menu {
+  position: fixed;
+  top: 8px;
+  left: 8px;
+  z-index: 200;
+  padding: 10px;
+  background: white;
+  transform: translateY(-200%);
+}
+
+.pular-menu:focus {
+  transform: translateY(0);
+}
+

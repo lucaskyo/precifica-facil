@@ -1,0 +1,72 @@
+/* 11. Responsividade: adapta as colunas à largura disponível. */
+@media (max-width: 1280px) {
+  .grade-indicadores,
+  .grade-receitas {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .grade-duas-colunas {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 820px) {
+  .aplicacao {
+    flex-direction: column;
+  }
+
+  .menu-lateral {
+    position: static;
+    width: 100%;
+    height: auto;
+    padding: 16px;
+  }
+
+  .marca {
+    padding-bottom: 14px;
+  }
+
+  .menu {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .menu-link {
+    padding: 10px 8px;
+  }
+
+  .conteudo {
+    padding: 24px 16px 60px;
+  }
+}
+
+@media (max-width: 560px) {
+  .menu {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .grade-indicadores,
+  .grade-receitas,
+  .linha-ingrediente {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .cartao,
+  .indicador {
+    padding: 18px 16px;
+  }
+
+  .linha-ingrediente {
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--cor-borda);
+  }
+
+  .busca {
+    width: 100%;
+  }
+
+  .acoes,
+  .acoes-formulario {
+    max-width: 100%;
+  }
+}

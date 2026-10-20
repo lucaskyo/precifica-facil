@@ -1,0 +1,102 @@
+/*
+ * Precifica Fácil — aparência compartilhada por todas as telas.
+ * Os nomes das classes descrevem o que cada parte representa.
+ * Para encontrar um trecho: procure por "Menu", "Formulários", "Tabelas" etc.
+ */
+
+/* 1. Cores e medidas reutilizadas com var(--nome-da-variavel). */
+:root {
+  --cor-fundo: #dbe5da;
+  --cor-cartao: #ffffff;
+  --cor-texto: #23262a;
+  --cor-secundaria: #5b625d;
+  --cor-borda: #dde5dc;
+  --cor-rosa: #f0a3a1;
+  --cor-rosa-hover: #e88d8a;
+  --cor-rosa-clara: #fbe4e2;
+  --cor-marrom: #6f4d51;
+  --cor-verde: #267044;
+  --cor-verde-clara: #e0f3e5;
+  --cor-amarela: #855610;
+  --cor-amarela-clara: #fdf0d8;
+  --cor-vermelha: #a73330;
+  --cor-vermelha-clara: #fbe1e0;
+  --borda-arredondada: 16px;
+  --sombra-cartao: 0 2px 12px rgba(35, 45, 35, 0.07);
+}
+
+/* 2. Regras gerais. box-sizing inclui bordas e padding no tamanho do elemento. */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--cor-fundo);
+  color: var(--cor-texto);
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+a {
+  color: var(--cor-marrom);
+  text-underline-offset: 3px;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 4px;
+  font-size: 1.65rem;
+  line-height: 1.3;
+}
+
+h2 {
+  margin-bottom: 16px;
+  font-size: 1.05rem;
+}
+
+h3 {
+  margin-bottom: 8px;
+  font-size: 0.9375rem;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+:focus-visible {
+  outline: 3px solid var(--cor-marrom);
+  outline-offset: 3px;
+}
+
+.texto-secundario,
+.nota {
+  color: var(--cor-secundaria);
+  font-size: 0.875rem;
+}
+
+.nota {
+  margin: 10px 0;
+}
+
+.texto-verde {
+  color: var(--cor-verde);
+}
+
+.texto-vermelho {
+  color: var(--cor-vermelha);
+}
+
