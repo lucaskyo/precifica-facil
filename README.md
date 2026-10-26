@@ -1,32 +1,25 @@
-# Precifica Fácil
+# Precifica Fácil 🧑‍🍳
 
-Aplicação web para gestão de confeitaria, com recursos para controlar ingredientes, receitas, estoque, produção, compras e vendas.
+[Read this README in English](README.en.md)
 
-## Funcionalidades
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![CSS](https://img.shields.io/badge/css-%23663399.svg?style=for-the-badge&logo=css&logoColor=white)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 
-- Dashboard inicial com faturamento, lucro estimado, unidades vendidas, receitas cadastradas, alertas de estoque e atividades recentes.
-- Cadastro e gerenciamento de ingredientes.
-- Controle de estoque e ajuste de quantidades.
-- Registro e histórico de compras.
-- Cadastro de receitas com ingredientes, rendimento, custo total, preço de venda, custo por unidade, lucro estimado e margem de lucro.
-- Simulação e registro de produção.
-- Registro de vendas.
-- Histórico de vendas com filtros e paginação.
-- Resumo mensal com indicadores, evolução semanal e produtos mais vendidos.
-- Exportação do relatório de vendas.
+Sistema web completo para gestão de confeitarias: Controle de receitas, insumos, estoque, produção e vendas,  da precificação ao relatório de lucros.
+
+## 📌 Funcionalidades
+
+- Painel Principal: Acompanhe em tempo real o faturamento, lucro estimado, unidades vendidas, receitas cadastradas, alertas de estoque e atividades recentes.
+- Cadastro Inteligente: Registro de receitas com ingredientes e rendimento, calculando automaticamente o custo total, custo por unidade, lucro estimado e margem de lucro com base no preço de venda.
+- Controle de Estoque: Gerenciamento completo de receitas, ingredientes, estoque e compras, com ajuste dinâmico de quantidades.
+- Validação de Estoque: Verificação automática se há ingredientes suficientes em estoque para a produção das receitas.
+- Histórico de Vendas: Registro completo de vendas com ferramentas de busca, filtros avançados e paginação.
+- Resumo Mensal: Indicadores consolidados, evolução semanal, ranking de produtos mais vendidos e exportação de relatórios de vendas.
 - Persistência dos dados no navegador usando `localStorage`.
-- Interface responsiva e acessível.
 - Alternância entre tema claro e escuro, com preferência salva no navegador e suporte à preferência do sistema.
 
-## Tecnologias
-
-- HTML5
-- CSS3
-- JavaScript
-- `localStorage` para persistência dos dados
-
-
-## Estrutura do projeto
+## 📁 Estrutura do projeto
 
 ```text
 .
@@ -77,10 +70,3 @@ Os dados são armazenados localmente no navegador por meio do `localStorage`. El
 Para limpar os dados cadastrados, acesse as ferramentas de desenvolvedor do navegador e remova o armazenamento local do site.
 
 > Os dados iniciais são demonstrativos. Confira ingredientes, custos, receitas e preços antes de utilizar os valores para fins reais.
-
-## Observações
-
-- As quantidades e os preços dos ingredientes devem utilizar a mesma unidade de medida.
-- O custo das receitas é calculado com base nos preços unitários dos ingredientes cadastrados.
-- O lucro estimado considera o preço de venda menos o custo dos ingredientes.
-- A aplicação depende de JavaScript habilitado no navegador.
