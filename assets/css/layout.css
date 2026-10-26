@@ -33,6 +33,10 @@
   flex-shrink: 0;
 }
 
+html[data-tema="escuro"] .marca-logo {
+  content: url("../logo-precifica-facil-escuro.png");
+}
+
 .menu {
   display: flex;
   flex-direction: column;
